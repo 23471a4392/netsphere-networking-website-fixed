@@ -74,3 +74,4 @@ function scan(){db.logs.unshift({id:Date.now(),event:'Network discovery scan com
 function exportData(){let b=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='netsphere-network-config.json';a.click();URL.revokeObjectURL(a.href);toast('Configuration exported')}
 function resetData(){if(confirm('Reset demo network data?')){localStorage.removeItem(KEY);db=JSON.parse(JSON.stringify(seed));renderPage();toast('Demo reset')}}function saveSettings(){db.settings.name=val('sName');db.settings.poll=+val('sPoll')||60;db.settings.theme=val('sTheme');save();toast('Settings saved')}
 document.addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});shell();
+// alert ack flow
