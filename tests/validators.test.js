@@ -24,3 +24,4 @@ describe('NetSphere validators', () => {
     expect(validateVlan({ vlanId: 100, name: 'Users' })).toEqual({});
   });
 });
+// coverage note
