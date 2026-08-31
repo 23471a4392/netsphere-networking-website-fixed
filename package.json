@@ -1,0 +1,30 @@
+{
+  "name": "netsphere-networking",
+  "version": "1.0.0",
+  "description": "NetSphere Networking Management Website — browser-based network ops dashboard",
+  "private": true,
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx --yes serve -l 8000",
+    "build": "echo 'Static frontend — no compile step.'",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
+  },
+  "keywords": ["networking", "nms", "ipam", "monitoring", "frontend"],
+  "author": "NetSphere Engineering",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "collectCoverageFrom": ["assets/utils/**/*.js"],
+    "coverageDirectory": "coverage",
+    "testMatch": ["**/tests/**/*.test.js"]
+  },
+  "engines": { "node": ">=18" }
+}
